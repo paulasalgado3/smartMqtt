@@ -52,17 +52,20 @@ home/feature/outlet/delete
 */
 
 client.subscribe ('home/feature/outlet/new', {qos:1});
-
+client.subscribe ('home/feature/outlet/delete', {qos:1});
 client.on('message', function(topic,message){
 	if(topic.toString() == "home/feature/outlet/new"){
-		var dispositivoNuevo = JSON.parse(message.toString()); 
-		if(!existe_dispositivo(dispositivoNuevo.id)){
-			crear_dispositivo(dispositivoNuevo);
-			console.log("Nuevo Dispositivo Id: " + dispositivoNuevo.id);  
+		var dispositivo = JSON.parse(message.toString()); 
+		if(!existe_dispositivo(dispositivo.id)){
+			crear_dispositivo(dispositivo);
+			console.log("Nuevo Dispositivo Id: " + dispositivo.id);  
 		}	
 	}else if (topic.toString() == "home/feature/outlet/delete"){
-		
-	
+		var dispositivo = JSON.parse(message.toString());
+		if(existe_dispositivo(dispositivo.id)){
+			borrar_dispositivo(dispositivo);
+			console.log("Dispositivo Borrado Id: " + dispositivo.id);
+		}
 	}
 });
 
