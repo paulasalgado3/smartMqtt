@@ -27,7 +27,7 @@ var dispositivo2 = new Object();
     dispositivos.push(dispositivo1);
 
 //Metodos
-function dispositivo_existente(id){
+function existe_dispositivo(id){
 	var existe = false;
 	for (i = 0; i < dispositivos.length; i++) {
             if(dispositivos[i].id==id){
@@ -36,7 +36,16 @@ function dispositivo_existente(id){
         }
 	return existe;
 }
-
+function crear_dispositivo(dispositivo){
+	dispositivos.push(dispositivo);
+}
+function borrar_dispositivo(dispositivo){
+	for (i = 0; i < dispositivos.length; i++) {
+            if(dispositivos[i].id==dispositivo.id){
+                        dispositivos.splice(i,1);
+            }
+        }
+}
 /*
 home/feature/outlet/new
 home/feature/outlet/delete
@@ -47,21 +56,15 @@ client.subscribe ('home/feature/outlet/new', {qos:1});
 client.on('message', function(topic,message){
 	if(topic.toString() == "home/feature/outlet/new"){
 		var dispositivoNuevo = JSON.parse(message.toString()); 
-		if(!dispositivo_existente(dispositivoNuevo.id)){
-			dispositivos.push(dispositivoNuevo);
+		if(!existe_dispositivo(dispositivoNuevo.id)){
+			crear_dispositivo(dispositivoNuevo);
 			console.log("Nuevo Dispositivo Id: " + dispositivoNuevo.id);  
 		}	
+	}else if (topic.toString() == "home/feature/outlet/delete"){
+		
+	
 	}
 });
-
-
-
-
-client.publish('presence', 'Hello mqtt');
-client.on('message', function (topic, message) {  
-  console.log('received message ',  message.toString());
-}); 
-
 
 
 
