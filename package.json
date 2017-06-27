@@ -1,0 +1,16 @@
+{
+  "name": "node_mqtt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "mqtt": "^2.9.0",
+    "websocket-stream": "^5.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "nodejs index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
