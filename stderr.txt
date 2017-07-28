@@ -1,0 +1,30 @@
+Error: ENOENT: no such file or directory, stat '/home/tecnologia/node_mqtt/cgi/common.cgi'
+    at Error (native)
+Error: ENOENT: no such file or directory, stat '/home/tecnologia/node_mqtt/stssys.htm'
+    at Error (native)
+Error: ENOENT: no such file or directory, stat '/home/tecnologia/node_mqtt/index.html'
+    at Error (native)
+Error: ENOENT: no such file or directory, stat '/home/tecnologia/node_mqtt/index.html'
+    at Error (native)
+Error: ENOENT: no such file or directory, stat '/home/tecnologia/node_mqtt/manager/html'
+    at Error (native)
+Error: ENOENT: no such file or directory, stat '/home/tecnologia/node_mqtt/testproxy.php'
+    at Error (native)
+Error: ENOENT: no such file or directory, stat '/home/tecnologia/node_mqtt/manager/html'
+    at Error (native)
+Error: ENOENT: no such file or directory, stat '/home/tecnologia/node_mqtt/manager/html'
+    at Error (native)
+Error: ENOENT: no such file or directory, stat '/home/tecnologia/node_mqtt/index.html'
+    at Error (native)
+Error: ENOENT: no such file or directory, stat '/home/tecnologia/node_mqtt/manager/html'
+    at Error (native)
+Error: ENOENT: no such file or directory, stat '/home/tecnologia/node_mqtt/index.html'
+    at Error (native)
+Error: ENOENT: no such file or directory, stat '/home/tecnologia/node_mqtt/manager/html'
+    at Error (native)
+Error: ENOENT: no such file or directory, stat '/home/tecnologia/node_mqtt/manager/html'
+    at Error (native)
+Error: ENOENT: no such file or directory, stat '/home/tecnologia/node_mqtt/testproxy.php'
+    at Error (native)
+Error: ENOENT: no such file or directory, stat '/home/tecnologia/node_mqtt/index.html'
+    at Error (native)
